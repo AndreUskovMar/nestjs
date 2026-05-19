@@ -2,10 +2,8 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { MovieModule } from './movie/movie.module';
-import { ReviewModule } from './review/review.module';
-import { ActorModule } from './actor/actor.module';
 import { PrismaModule } from './prisma/prisma.module';
+import { MovieModule } from './movie/movie.module';
 
 @Module({
   imports: [
@@ -14,8 +12,6 @@ import { PrismaModule } from './prisma/prisma.module';
     }),
     PrismaModule,
     MovieModule,
-    ReviewModule,
-    ActorModule,
   ],
   controllers: [AppController],
   providers: [AppService],
