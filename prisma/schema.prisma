@@ -12,13 +12,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Message {
+model Artist {
   id String @id @default(uuid())
 
-  text String
+  name String
+  genre String
 
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @default(now()) @map("updated_at")
-
-  @@map("messages")
+  @@map("artists")
 }

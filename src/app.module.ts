@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { PrismaModule } from './prisma/prisma.module';
-import { ChatModule } from './chat/chat.module';
+import { ArtistModule } from './artist/artist.module';
 
 @Module({
   imports: [
@@ -9,7 +9,7 @@ import { ChatModule } from './chat/chat.module';
       isGlobal: true,
     }),
     PrismaModule,
-    ChatModule,
+    ArtistModule,
   ],
 })
 export class AppModule {}
