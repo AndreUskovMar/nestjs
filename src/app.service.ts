@@ -1,8 +1,11 @@
 import { Injectable } from '@nestjs/common';
+import { SpotifyService } from './spotify/spotify.service';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World! This is a test';
+  constructor(private readonly spotifyService: SpotifyService) {}
+
+  async getArtist(id: string) {
+    return await this.spotifyService.getArtist(id);
   }
 }
