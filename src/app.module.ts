@@ -6,6 +6,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { FileModule } from './file/file.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
+import { TaskModule } from './task/task.module';
 import * as path from 'path';
 
 @Module({
@@ -20,6 +21,7 @@ import * as path from 'path';
     PrismaModule,
     SpotifyModule,
     FileModule,
+    TaskModule,
   ],
   controllers: [AppController],
   providers: [AppService],
