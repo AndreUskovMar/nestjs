@@ -10,8 +10,7 @@ import {
   // UseGuards,
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
-import { RegisterRequest } from './dto/register.dto';
-import { LoginRequest } from './dto/login.dto';
+import { RegisterRequest, LoginRequest, AuthResponse } from './dto';
 import type { Response, Request } from 'express';
 import {
   ApiBadRequestResponse,
@@ -21,10 +20,8 @@ import {
   ApiOperation,
   ApiUnauthorizedResponse,
 } from '@nestjs/swagger';
-import { AuthResponse } from './dto/auth.dto';
 // import { AuthGuard } from '@nestjs/passport';
-import { Authorization } from '../common/decorators/authorization.decorator';
-import { Authorized } from '../common/decorators/authorized.decorator';
+import { Authorization, Authorized } from 'src/common/decorators';
 import type { User } from '@prisma/client';
 
 @Controller('auth')
